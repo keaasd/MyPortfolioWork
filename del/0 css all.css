@@ -12,6 +12,18 @@ hf.beget.tech/public_html==https: //habr.com/ru/company/funcorp/blog/538982/
 ===========data-pid="51"
 webkit-text-size-adjust: none;
 
+&::after {
+    content: "";
+    position: absolute;
+    left: -0.8vw;
+    bottom: 0;
+    display: block;
+    height: 24px;
+    width: 1px;
+    opacity: 0.2;
+    background-color: #010101;
+  }
+  
 ==:root {
     --text-size-medium;
 }
