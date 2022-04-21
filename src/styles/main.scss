@@ -1,12 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap");
 
-$green: #27300f;
-$orange: #d26a22;
-$white: rgb(255, 255, 255);
-$font-cormorant: "Cormorant",
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/static/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  }
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("../fonts/static/Inter-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("../fonts/static/Inter-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-display: swap;
+      }
+
+$black: #010101;
+$white-g: #F3F2F0;
+$white: #FFFFFF;
+$white: #D40000;
+
+$font-inter: "Inter",
 serif;
-$font-jost: "Jost",
-sans-serif;
 
 $r_minmob: 320px;
 $r_mob_360: 360px;
@@ -40,9 +65,9 @@ h1 {
 body {
   font-size: 62.5%;
   /* 16px*0.62.5% = 10px */
-  color: #000000;
-  font-weight: normal;
-  font-family: Montserrat;
+  color: $black;
+  font-weight: 400;
+  font-family: $font-inter;
 }
 
 img {
@@ -72,7 +97,20 @@ input {
   outline: none;
   border: none;
 }
-
+input {
+  background: #010101;
+opacity: 0.05;
+width: 100%;
+display: block;
+&:focus {
+  border: none;
+  outline: none;
+  transition: 0.2s ease-in;
+}
+&:invalid {
+  border: red;
+}
+}
 button {
   cursor: pointer;
 }
