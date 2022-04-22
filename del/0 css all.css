@@ -1,4 +1,4 @@
-полезные ссылки: метхе https: //github.com/Maksim-Methed/videotube
+/* полезные ссылки: метхе https: //github.com/Maksim-Methed/videotube
 https: //jsonplaceholder.typicode.com/
 ==https: //shaktyka.github.io/pc_assemb/
 сборка ПК====крутой свайпер swiper slider слайдер уроки 8шт https: //www.youtube.com/playlist?list=PLyf8LgkO_8q87TteiUKzD74raAOu8LpcD
@@ -10,8 +10,23 @@ hf.beget.tech/public_html==https: //habr.com/ru/company/funcorp/blog/538982/
 вордпресс wordpress=анна блок макет айболит https: //www.youtube.com/watch?v=UZ_OMrgbkyE
 ==классы https: //den7466.github.io/Module01-Test/portfolio/  
 ===========data-pid="51"
-webkit-text-size-adjust: none;
+webkit-text-size-adjust: none; */
 
+заглавные буквы {
+text-transform: uppercase;}
+&:hover:after {}
+
+.nav_mail::after {
+    content: "";
+    position: absolute;
+    left: -0.8vw;
+    bottom: 0;
+    display: block;
+    height: 24px;
+    width: 1px;
+    opacity: 0.2;
+    background-color: #010101;
+  }:not(:first-child)
 &::after {
     content: "";
     position: absolute;
@@ -23,7 +38,7 @@ webkit-text-size-adjust: none;
     opacity: 0.2;
     background-color: #010101;
   }
-  
+  :nth-child(1n+2) кроме первого
 ==:root {
     --text-size-medium;
 }
@@ -568,6 +583,8 @@ webkit-text-size-adjust: none;
             background-position: center center;
 
 
+            
+
             width: 25px;
             height: 25px;
             max-width: 100%;
@@ -865,3 +882,7 @@ webkit-text-size-adjust: none;
                     }
 
                 );
+
+                .navigation a:not(:last-child) {
+                    margin-right: 7.1rem;
+                  }
