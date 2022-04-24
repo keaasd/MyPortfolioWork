@@ -65,7 +65,114 @@ $r_mob_500: 500px;
       margin-left: 12px;
     display: block;  
     }
+стили
+.select {
+	margin: 0 auto;
+	position: relative;
+	width: 250px;
+}
+.select.is-active .select__body {
+	display: block;}
 
+.select__header {
+	border: 1px solid #ccc;
+	cursor: pointer;
+	display: flex;
+}
+.select__current {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 8px;
+}
+.select__icon {
+	align-items: center;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	height: 40px;
+	margin-left: auto;
+	text-align: center;
+	width: 40px;
+}
+
+.select__body {
+	border: 1px solid #cccccc;
+	border-top: 0;
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 100%;
+}
+.select__item {
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 8px;
+}
+
+.select__item:hover {
+	background-color: #f2f2f2;
+}
+
+эээээ
+https://www.youtube.com/watch?v=H-UPHVjunOs
+https://codepen.io/leon9208/pen/jOEBJgW
+https://codepen.io/leon9208/pen/VwYpJwW
+
+2== https://www.youtube.com/watch?v=WrP-kdozbqk
+
+от Юлии https://www.youtube.com/watch?v=JLm_bt9NwjM&feature=youtu.be без кнопочки
+    <select name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    
+    <div class="select is-active">
+        <div class="select__header">
+            <span class="select__current">Value 1</span>
+            <div class="select__icon">&times;</div>
+        </div>
+    
+        <div class="select__body">
+            <div class="select__item">Value 1</div>
+            <div class="select__item">Value 2</div>
+            <div class="select__item">Value 3</div>
+            <div class="select__item">Value 4</div>
+            <div class="select__item">Value 5</div>
+        </div>
+    </div>
+<script>
+    let select = function () {
+    let selectHeader = document.querySelectorAll('.select__header');
+    let selectItem = document.querySelectorAll('.select__item');
+
+    selectHeader.forEach(item => {
+        item.addEventListener('click', selectToggle)
+    });
+
+    selectItem.forEach(item => {
+        item.addEventListener('click', selectChoose)
+    });
+
+    function selectToggle() {
+        this.parentElement.classList.toggle('is-active');
+    }
+
+    function selectChoose() {
+        let text = this.innerText,
+            select = this.closest('.select'),
+            currentText = select.querySelector('.select__current');
+        currentText.innerText = text;
+        select.classList.remove('is-active');
+
+    }
+
+};
+
+
+select();
+</script>
 
 </body>
 </html>

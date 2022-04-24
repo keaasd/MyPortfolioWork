@@ -1,7 +1,7 @@
 @import url("../styles/fonts.css");
 
 $black: #010101;
-$white-g: #F3F2F0;
+$white-g: rgb(243, 242, 240);
 $white: #FFFFFF;
 $red: #D40000;
 
@@ -229,13 +229,6 @@ li {
   overflow: hidden;
 }
 
-.modal-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  cursor: pointer;
-}
-
 /* moby-modal-off */
 .header {
   display: flex;
@@ -302,13 +295,14 @@ li {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    background-color: red;
+    background-color: $white-g;
+    // background-color: red;
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 1140px;
+    // max-width: 1140px;
     margin: 0 auto;
     box-sizing: border-box;
+    z-index: 5;
   }
 }
 
@@ -805,6 +799,10 @@ li {
     position: relative;
     margin: auto;
     max-width: 600px;
+
+    @media (max-width: $r_mob_567) {
+      padding: 60px 10px;
+    }
   }
 
   &-close {
@@ -812,17 +810,35 @@ li {
     top: 20px;
     right: 20px;
     cursor: pointer;
+
+    @media (max-width: $r_mob_567) {
+      top: 10px;
+      right: 10px;
+    }
   }
 
   &_font {
     font-size: 12px;
     line-height: 150%;
+
+    @media (max-width: $r_mob_567) {
+      font-size: 11px;
+    }
+
+    @media (max-width: $r_mob_360) {
+      font-size: 10px;
+    }
   }
 
   &__user {
     padding: 24px 20px;
     background: rgba(1, 1, 1, 0.05);
     margin-bottom: 20px;
+
+    @media (max-width: $r_mob_567) {
+      padding: 20px 20px;
+    }
+
   }
 
   &__users {
@@ -834,6 +850,9 @@ li {
     display: block;
     margin-bottom: 10px;
 
+    @media (max-width: $r_mob_567) {
+      margin-bottom: 8px;
+    }
   }
 
 
@@ -851,6 +870,10 @@ li {
     padding: 0 20px 24px;
     display: none;
 
+    @media (max-width: $r_mob_567) {
+      padding-bottom: 20px;
+    }
+
     &:hover {
       color: $black;
     }
@@ -860,6 +883,11 @@ li {
     color: $black;
     padding-top: 24px;
     display: block;
+
+    @media (max-width: $r_mob_567) {
+      padding-top: 20px;
+    }
+
   }
 
   &_btn {
@@ -872,6 +900,11 @@ li {
     position: absolute;
     right: 24px;
     top: 32px;
+
+    @media (max-width: $r_mob_567) {
+      top: 25px;
+    }
+
   }
 }
 
@@ -885,6 +918,13 @@ li {
   width: 100%;
   margin-top: 40px;
   transition: 0.3s linear;
+
+
+
+  @media (max-width: $r_mob_567) {
+    font-size: 12px;
+    margin-top: 30px;
+  }
 
   &:hover {
     background: #EA0E00;
@@ -903,6 +943,8 @@ li {
 
     @media (max-width: $r_mob_567) {
       font-size: 16px;
+      max-width: 203px;
+      margin: auto;
     }
   }
 
@@ -911,6 +953,12 @@ li {
     line-height: 150%;
     max-width: 330px;
     margin: 13px auto 0;
+
+    @media (max-width: $r_mob_567) {
+      margin: 20px auto 0;
+      max-width: 296px;
+    }
+
   }
 
   &__line {
@@ -918,6 +966,10 @@ li {
     padding-bottom: 1px;
     width: 100%;
     margin-top: 30px;
+
+    @media (max-width: $r_mob_567) {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -931,17 +983,6 @@ li {
   height: 100%;
   width: 100%;
   max-width: 229px;
-}
-
-.header-modal-close {
-  // background-image: url(../images/close.svg);
-  background-repeat: no-repeat;
-  background-color: transparent;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  height: 16.97px;
-  width: 16.97px;
 }
 
 .burger-link a {
@@ -1036,18 +1077,11 @@ li {
   visibility: visible;
   pointer-events: all;
 }
-
-
-.modal-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  cursor: pointer;
-}
-
-/* ку ку  */
-@media (max-width: 360px) {
-  :root {
-    --text-size-mini: 1rem;
+.about {
+  &__subtitle {
+    font-weight: 700;
+letter-spacing: 0.03em;
+text-transform: uppercase;
   }
 }
+
