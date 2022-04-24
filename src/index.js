@@ -21,6 +21,10 @@ function fixHeader() {
     page.style.marginTop = 0;
   }
 }
+if (window.pageYOffset > 0){
+  console.log('больше 0: ');
+}
+// window.scrollTo(pageYOffset, 0)
 
 window.addEventListener('scroll', fixHeader)
 // Swiper свайпер

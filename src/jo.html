@@ -32,7 +32,7 @@ $r_desk_1170: 1170px;
 
 @media (max-width: $r_desk_full_1750) 
 @media (max-width: $r_desk_1400) 
-@media (max-width: $r_desk_1350)
+@media (max-width: $r_desk_1360) {}
 
 
 @media (max-width: $r_desk_hd) 1200
@@ -52,9 +52,19 @@ $r_desk_1170: 1170px;
 $r_desk_1400
 
 @media (max-width: $r_mob_360) {}
+@media (max-width: $r_minmob) {}
 $r_mob_500: 500px;
 
-
+&::after {
+    content: "";
+    background-image: url('../images/arrow1.svg');
+    width: 16px;
+    height: 12px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-left: 12px;
+    display: block;  
+    }
 
 
 </body>
