@@ -35,7 +35,7 @@ $r_desk_1170: 1170px;
 @media (max-width: $r_desk_1360) {}
 
 
-@media (max-width: $r_desk_hd) 1200
+@media (max-width: $r_desk_hd) {} 1200
 
 @media (max-width: $r_desk_1170) 1170
 @media (max-width: $r_desk_1120)
@@ -55,6 +55,21 @@ $r_desk_1400
 @media (max-width: $r_minmob) {}
 $r_mob_500: 500px;
 
+  --margin-l: 180px;
+  --margin-m: 80px;
+  --margin-s: 60px;
+font-size: var(--margin-l);
+
+
+180px           var(--margin-l);
+80px            var(--margin-m);
+60px            var(--margin-s);
+:root {
+    --text-size-mini: 3rem;
+    --margin: 180px;
+  }
+
+  flex: 0 0 50%;
 &::after {
     content: "";
     background-image: url('../images/arrow1.svg');
