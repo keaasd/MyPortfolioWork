@@ -14,28 +14,29 @@
 </head>
 
 <body>
-  <!-- бургер-кнопка -->
-  <div class="container">
+  <!-- бургер-кнопка -->  
     <header class="header">
-
-      <nav class="navigation">
-        <ul class="nav__list">
-          <li class="nav_items"><a class="header__nav_link links" href="#">Обо&nbsp;мне</a></li>
-          <li class="nav_items"><a class="header__nav_link links" href="#">Портфолио</a></li>
-          <li class="nav_items"><a class="header__nav_link links" href="#">Этапы&nbsp;работ</a></li>
-          <li class="nav_items"><a class="header__nav_link links" href="#">Цены</a></li>
-          <li class="nav_items"><a class="header__nav_link links" href="#">Обратная&nbsp;связь</a></li>
-        </ul>
-      </nav>
-      <div class="header__contact">
-        <div class="header__contact-box ">
-          <a class="header__nav_link nav_tel links" href="tel:+79293398016">8&nbsp;929&nbsp;339&#8209;80&#8209;16</a>
-          <a class="header__nav_link nav_mail links" href="mailto:kea-asd@yandex.ru">kea&#8209;asd@yandex.ru</a>
-          <button type="button" class="burger-btn__open"></button>
-        </div>
-      </div>
-    </header>
+<div class="header__inner">
+  <nav class="navigation">
+    <ul class="nav__list">
+      <li class="nav_items"><a class="header__nav_link links" href="#">Обо&nbsp;мне</a></li>
+      <li class="nav_items"><a class="header__nav_link links" href="#">Портфолио</a></li>
+      <li class="nav_items"><a class="header__nav_link links" href="#">Этапы&nbsp;работ</a></li>
+      <li class="nav_items"><a class="header__nav_link links" href="#">Цены</a></li>
+      <li class="nav_items"><a class="header__nav_link links" href="#">Обратная&nbsp;связь</a></li>
+    </ul>
+  </nav>
+  <div class="header__contact">
+    <div class="header__contact-box ">
+      <a class="header__nav_link nav_tel links" href="tel:+79293398016">8&nbsp;929&nbsp;339&#8209;80&#8209;16</a>
+      <a class="header__nav_link nav_mail links" href="mailto:kea-asd@yandex.ru">kea&#8209;asd@yandex.ru</a>
+      <button type="button" class="burger-btn__open"></button>
+    </div>
   </div>
+</div>
+      
+    </header>
+  
 
   <main>
     <div class="container">
@@ -147,7 +148,7 @@
                   <img src="images/1_price.svg" alt="">
                 </div>
                 <div class="advantage__box">
-                  <h3 class="advantage__title" >Актуальные цены</h3>
+                  <h3 class="advantage__title">Актуальные цены</h3>
                   <p class="advantage__description">Ничего лишнего, без переплат, 100%&nbsp;отработка ваших денег</p>
                 </div>                
               </div>
@@ -199,36 +200,76 @@
             </div>
 
             <div class="languages">
-              <div class="languages_img">
-                <img src="images/html.svg" alt="">
+              <div class="languages_imgs">
+                <a class="languages_img" href="https://ru.wikipedia.org/wiki/HTML5" target="_blank" rel="noopener noreferrer">
+                <img src="images/html.svg" alt=""></a>
+                <div class="languages__hint">                  
+                  <h3 class="languages__hint_title">HTML5</h3>
+                  <p class="languages__hint_descript">Язык для структурирования и представления содержимого всемирной паутины</p>
+                </div>
               </div>
-              <div class="languages_img">
-                <img src="images/css.svg" alt="">
+              <div class="languages_imgs">
+                <a class="languages_img" href="https://ru.wikipedia.org/wiki/CSS#%D0%A3%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C_3_(CSS3)" target="_blank" rel="noopener noreferrer">
+                  <img src="images/css.svg" alt=""></a>
+                  <div class="languages__hint">                  
+                  <h3 class="languages__hint_title">CSS</h3>
+                  <p class="languages__hint_descript">Технология описания внешнего вида документа, средство оформления веб-страниц.</p>
+                </div>
+                  
               </div>
-              <div class="languages_img">
-                <img src="images/js.svg" alt="">
+              <div class="languages_imgs">
+                <a class="languages_img" href="https://ru.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener noreferrer">
+                  <img src="images/js.svg" alt=""></a>
+                  <div class="languages__hint">                  
+                  <h3 class="languages__hint_title">JavaScript ES6+</h3>
+                  <p class="languages__hint_descript">Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам</p></div>
+                  
               </div>
-              <div class="languages_img">
-                <img src="images/jquery.svg" alt="">
+              <div class="languages_imgs">
+                <a class="languages_img" href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="images/jquery.svg" alt=""></a>
+                  <div class="languages__hint">                  
+                  <h3 class="languages__hint_title">jQuery</h3>
+                  <p class="languages__hint_descript">Фреймворк на&nbsp;основе javascript, оптимизированный на удобство, стабильность и кроссбраузерность</p>
+                  </div>
               </div>
-              <div class="languages_img">
-                <img src="images/bootstr.svg" alt="">
+              <div class="languages_imgs">
+                <a class="languages_img" href="https://ru.wikipedia.org/wiki/Bootstrap_(%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA)" target="_blank" rel="noopener noreferrer">
+                  <img src="images/bootstr.svg" alt=""></a>
+                  <div class="languages__hint">                  
+                  <h3 class="languages__hint_title">Bootstrap</h3>
+                  <p class="languages__hint_descript">Свободный набор инструментов для создания сайтов и веб-приложений</p>
+                  </div>
               </div>
-              <div class="languages_img">
-                <img src="images/php.svg" alt="">
+              <div class="languages_imgs">
+                <a class="languages_img" href="https://ru.wikipedia.org/wiki/PHP" target="_blank" rel="noopener noreferrer">
+                  <img src="images/php.svg" alt=""></a>
+                  <div class="languages__hint">                  
+                  <h3 class="languages__hint_title">PHP</h3>
+                  <p class="languages__hint_descript">Скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений</p>
+                  </div>
               </div>
-              <div class="languages_img">
-                <img src="images/vue.svg" alt="">
+              <div class="languages_imgs">
+                <a class="languages_img" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiK1v3LhbH3AhXaSvEDHQMgBOwQmhN6BAhUEAI&url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FVue.js&usg=AOvVaw1kpev_cE2pS3lLFTGZc9Qu" target="_blank" rel="noopener noreferrer">
+                  <img src="images/vue.svg" alt=""></a>
+                  <div class="languages__hint">                  
+                  <h3 class="languages__hint_title">Vue</h3>
+                  <p class="languages__hint_descript">Прогрессивный фреймворк для создания пользовательских интерфейсов</p>
+                  </div>
               </div>              
-              <div class="languages_img">
-                <img src="images/wpress.svg" alt="">
+              <div class="languages_imgs">
+                <a class="languages_img" href="https://ru.wikipedia.org/wiki/WordPress" target="_blank" rel="noopener noreferrer">
+                  <img src="images/wpress.svg" alt=""></a>
+                  <div class="languages__hint">                  
+                  <h3 class="languages__hint_title">Wordpress</h3>
+                  <p class="languages__hint_descript">Конструктор, с&nbsp;помощью которого можно быстро создать свой сайт и редактировать его содержимое</p>
+                  </div>
               </div>
             </div>
-
+            <h1 class="title title__highlight">web-разработчик</h1>
         </div>
       </div>
       
-    </section>
 
   </main>
   <!-- мобильное меню   -->

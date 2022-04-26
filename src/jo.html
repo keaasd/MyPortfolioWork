@@ -32,27 +32,33 @@ $r_desk_1170: 1170px;
 
 @media (max-width: $r_desk_full_1750) 
 @media (max-width: $r_desk_1400) 
-@media (max-width: $r_desk_1360) {}
 
 
-@media (max-width: $r_desk_hd) {} 1200
 
+$r_desk_1400
 @media (max-width: $r_desk_1170) 1170
 @media (max-width: $r_desk_1120)
+@media (max-width: $r_mob_500) {}
 
 @media (max-width: $r_tab_900) {}
 
 
-@media (max-width: $r_desk) 1000
-@media (max-width: $r_desk_1040) {}
-@media (max-width: $r_tab) {}          768
-567
-@media (max-width: $r_mob_567) {}
-@media (max-width: $r_mob_500) {}
-$r_desk_1400
+@media (max-width: $r_desk_1360) {}        1360
 
-@media (max-width: $r_mob_360) {}
-@media (max-width: $r_minmob) {}
+@media (max-width: $r_desk_hd) {}               1200
+
+@media (max-width: $r_desk) 1000                    1000
+
+@media (max-width: $r_desk_1040) {}                     1040
+                                                    <!-- ----------------- -->
+@media (max-width: $r_tab) {}                   768
+
+@media (max-width: $r_mob_567) {}           567
+
+@media (max-width: $r_mob_360) {}       360
+@media (max-width: $r_minmob) {}    320
+
+
 $r_mob_500: 500px;
 
   --margin-l: 180px;
@@ -70,6 +76,7 @@ font-size: var(--margin-l);
   }
 
   flex: 0 0 50%;
+  фон
 &::after {
     content: "";
     background-image: url('../images/arrow1.svg');
@@ -187,7 +194,31 @@ https://codepen.io/leon9208/pen/VwYpJwW
 
 
 select();
+
+
 </script>
+<pre>
+    // absolute выровнять по центру абсолют
+    &.fix-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $white-g;
+        // background-color: red;
+        padding-left: 20px;
+        padding-right: 20px;
+        // max-width: 1140px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        z-index: 5;
+        top:50%;
+    left:50%;
+    transform:translate(-50%, 0); 
+      }
+      transition: .3s linear;
+</pre>
+
 
 </body>
 </html>
