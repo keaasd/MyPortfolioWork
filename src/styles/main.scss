@@ -1536,17 +1536,37 @@ li {
 
   &__flex {
     display: flex;
-    // justify-content: space-between;
+
+    @media (max-width: $r_tab) {
+      // justify-content: space-between;
+    }
+
     // max-width: 805px;
   }
 
-  // &__inner-one {}
+  &__inner-one {
+    @media (max-width: $r_tab) {
+      flex-basis: 42%;
+    }
+
+    @media (max-width: $r_mob_360) {
+      flex-basis: 46%;
+    }
+  }
 
   &__title {
     font-size: 28px;
     font-weight: 400;
     line-height: 150%;
     max-width: 382px;
+
+    @media (max-width: $r_tab) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      font-size: 16px;
+    }
   }
 
   &__subtitle {
@@ -1556,21 +1576,57 @@ li {
     opacity: 0.8;
     margin-top: 20px;
     margin-bottom: 73px;
+
+    @media (max-width: $r_tab) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      font-size: 10px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: $r_mob_360) {
+      max-width: 117px;
+    }
   }
+
+  &__description {
+    @media (max-width: $r_mob_360) {
+      font-size: 12px;
+    }
+  }
+
 
   &__inner-two {
     margin-left: 10.3vw;
+
+    @media (max-width: $r_tab) {
+      margin-left: 1vw;
+    }
   }
 
   &__text {
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
+
+    @media (max-width: $r_tab) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      font-size: 12px;
+    }
   }
 
   &__list {
     margin-top: 20px;
     margin-bottom: 40px;
+
+    @media (max-width: $r_mob_567) {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -1579,6 +1635,17 @@ li {
     opacity: 0.8;
     position: relative;
     padding-left: 16px;
+
+    @media (max-width: $r_tab) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      font-size: 12px;
+    }
+
+
+
 
     &::before {
       content: "";
@@ -1591,6 +1658,10 @@ li {
       top: 50%;
       left: 2px;
       transform: translate(0, -50%);
+
+      @media (max-width: $r_mob_567) {
+        left: 8px;
+      }
     }
   }
 
@@ -1599,6 +1670,18 @@ li {
     font-size: 42px;
     line-height: 150%;
     position: relative;
+
+    @media (max-width: $r_tab) {
+      font-size: 26px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $r_mob_360) {
+      font-size: 22px;
+    }
 
     &::after {
       content: "";
