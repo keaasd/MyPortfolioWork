@@ -405,7 +405,6 @@ li {
       border-radius: 50%;
       background-color: $white;
       z-index: -2;
-      z-index: -2;
 
       @media (max-width: $r_desk_1040) {
         width: 200px;
@@ -431,7 +430,6 @@ li {
       content: "";
       background-image: url('../images/triangle.svg');
       position: absolute;
-      width: 76px;
       width: 68px;
       height: 95px;
       top: -76px;
@@ -560,6 +558,7 @@ li {
     width: 16px;
     height: 12px;
     background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     margin-left: 12px;
     display: block;
@@ -1538,7 +1537,7 @@ li {
     display: flex;
 
     @media (max-width: $r_tab) {
-      // justify-content: space-between;
+      justify-content: space-between;
     }
 
     // max-width: 805px;
@@ -1546,12 +1545,11 @@ li {
 
   &__inner-one {
     @media (max-width: $r_tab) {
-      flex-basis: 42%;
+      max-width: 43.9vw;
+      width: 100%;
     }
 
-    @media (max-width: $r_mob_360) {
-      flex-basis: 46%;
-    }
+
   }
 
   &__title {
@@ -1562,10 +1560,15 @@ li {
 
     @media (max-width: $r_tab) {
       font-size: 18px;
+
     }
 
     @media (max-width: $r_mob_567) {
       font-size: 16px;
+    }
+
+    @media (max-width: $r_mob_360) {
+      max-width: 137px;
     }
   }
 
@@ -1579,6 +1582,7 @@ li {
 
     @media (max-width: $r_tab) {
       font-size: 14px;
+      max-width: 80%;
     }
 
     @media (max-width: $r_mob_567) {
@@ -1602,7 +1606,13 @@ li {
     margin-left: 10.3vw;
 
     @media (max-width: $r_tab) {
-      margin-left: 1vw;
+      // margin-left: 26vw;
+      margin-left: 7%;
+      flex-grow: 1;
+    }
+
+    @media (max-width: $r_mob_567) {
+      margin-left: 1%;
     }
   }
 
@@ -1659,8 +1669,13 @@ li {
       left: 2px;
       transform: translate(0, -50%);
 
+      @media (max-width: $r_tab) {
+        top: 15px;
+      }
+
       @media (max-width: $r_mob_567) {
         left: 8px;
+        top: 11px;
       }
     }
   }
@@ -1694,6 +1709,73 @@ li {
       border-radius: 50%;
       background-color: $white;
       z-index: -1;
+
+      @media (max-width: $r_tab) {
+        height: 70px;
+        width: 70px;
+      }
+
+      @media (max-width: $r_mob_567) {
+        width: 40px;
+        height: 40px;
+        left: -20px;
+        bottom: -2px;
+      }
     }
+  }
+}
+
+.your-project {
+  margin-top: var(--margin-m);
+
+  &__subtitle {
+    position: relative;
+    font-size: 28px;
+    max-width: 300px;
+    line-height: 150%;
+
+    &::before {
+      content: "";
+      background-image: url('../images/triangle.svg');
+      position: absolute;
+      width: 73px;
+      height: 71px;
+      top: 42px;
+      left: -62.3%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-left: 12px;
+      display: block;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -50%;
+      bottom: -106px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      z-index: -2;
+    }
+  }
+
+  &__text {
+    margin-top: 15px;
+    max-width: 550px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__social {
+    display: flex;
+    align-items: end;
+  }
+  &__modal {
+    flex-grow: 1;
+max-width: 560px;
   }
 }
