@@ -886,3 +886,8 @@ text-transform: uppercase;}
                 .navigation a:not(:last-child) {
                     margin-right: 7.1rem;
                   }
+
+
+                  .drop-checkbox {
+                    height: 1px;
+                    opacity: 0;}

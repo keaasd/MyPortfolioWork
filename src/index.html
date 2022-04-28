@@ -364,8 +364,30 @@
               <div class="your-project__modal">
                 <form class="modal__form" action="#">
                   <label for="tel" class="modal__label modal_font">Телефон или почта</label>
-                  <input class="modal__user modal_font" type="text" placeholder="Введите телефон">
+                  <input id="tel" class="modal__user modal_font" type="text" placeholder="Введите телефон">
                   <span class="modal__label modal_font">Выберите удобный способ связи</span>
+                  <div class="jumbotron modal__users  modal_font">  
+                    <!-- Dropdown -->
+                    <label class="drop">
+                      <input type="checkbox" id="target-drop-example" class="drop-checkbox" > <!-- Toggle Drop -->
+                      <span class="modal__form_item modal_font modal__form_active control">Telegram </span> <!-- Fake button -->
+                      <!-- Items -->
+                      <ul class="drop-items">
+                        <li class="item-drop modal__form_item">
+                            WhatsApp</li>
+                          <li class="item-drop modal__form_item">
+                            Viber</li>
+                            <li class="item-drop modal__form_item">
+                                Звонок на телефон</li>
+                                <li class="item-drop modal__form_item">
+                                    SMS сообщение</li>
+                       </ul>
+                      <!-- Alternative to close dropdown with click out -->
+                      <label for="target-drop-example" class="overlay-close"></label>
+                    </label>   
+                    <!-- END -- Dropdown -->
+                  </div>
+<!--                   
                   <div class="modal__users  modal_font" type="text">
                     <span class="modal__form_item modal_font modal__form_active">Telegram </span>
                     <span class="modal__form_item modal_font">WhatsApp</span>
@@ -373,7 +395,7 @@
                     <span class="modal__form_item modal_font">Звонок на телефон</span>
                     <span class="modal__form_item modal_font">SMS сообщение</span>
                     <button class="modal__form_btn" type="button"></button>
-                  </div>
+                  </div> -->
                   <button class="button" type="submit">Отправить</button>
                 </form>
               </div>
@@ -385,7 +407,7 @@
   <div class="jumbotron">  
     <!-- Dropdown -->
     <label class="drop">
-      <input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
+      <input type="checkbox" id="target-drop-example" class="drop-checkbox" > <!-- Toggle Drop -->
       <span class="control">Dropdown</span> <!-- Fake button -->
 
 
