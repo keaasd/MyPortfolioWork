@@ -4,7 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './styles/main.scss';
 import $ from 'jquery';
-
+import './js/select.js';
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 

@@ -362,75 +362,33 @@
                 <li class="special__items"><a href="" class="special__link links lind">Linkedin</a></li>
               </ul>
               <div class="your-project__modal">
-                <form class="modal__form" action="#">
+                <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
                   <label for="tel" class="modal__label modal_font">Телефон или почта</label>
-                  <input id="tel" class="modal__user modal_font" type="text" placeholder="Введите телефон">
+                  <input id="tel" name="tel-email" class="modal__user modal_font" type="text" placeholder="Введите телефон" required>
                   <span class="modal__label modal_font">Выберите удобный способ связи</span>
-                  <div class="jumbotron modal__users  modal_font">  
-                    <!-- Dropdown -->
-                    <label class="drop">
-                      <input type="checkbox" id="target-drop-example" class="drop-checkbox" > <!-- Toggle Drop -->
-                      <span class="modal__form_item modal_font modal__form_active control">Telegram </span> <!-- Fake button -->
-                      <!-- Items -->
-                      <ul class="drop-items">
-                        <li class="item-drop modal__form_item">
-                            WhatsApp</li>
-                          <li class="item-drop modal__form_item">
-                            Viber</li>
-                            <li class="item-drop modal__form_item">
-                                Звонок на телефон</li>
-                                <li class="item-drop modal__form_item">
-                                    SMS сообщение</li>
-                       </ul>
-                      <!-- Alternative to close dropdown with click out -->
-                      <label for="target-drop-example" class="overlay-close"></label>
-                    </label>   
-                    <!-- END -- Dropdown -->
-                  </div>
-<!--                   
-                  <div class="modal__users  modal_font" type="text">
-                    <span class="modal__form_item modal_font modal__form_active">Telegram </span>
-                    <span class="modal__form_item modal_font">WhatsApp</span>
-                    <span class="modal__form_item modal_font">Viber</span>
-                    <span class="modal__form_item modal_font">Звонок на телефон</span>
-                    <span class="modal__form_item modal_font">SMS сообщение</span>
-                    <button class="modal__form_btn" type="button"></button>
-                  </div> -->
+                  <div class="form-group">
+                    <div class="dropdown">
+                        <div class="dropdown__box">
+                          <button type="button" class="dropdown__button">Telegram</button>
+                          <span class="dropdown__button_arrow"></span>
+                        </div> 
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item" data-value="whatsApp">WhatsApp</li>
+                            <li class="dropdown__list-item" data-value="viber">Viber</li>
+                            <li class="dropdown__list-item" data-value="phone">Звонок на телефон</li>
+                            <li class="dropdown__list-item" data-value="sms">SMS сообщение</li>
+                            <li class="dropdown__list-item" data-value="telegram">Telegram</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
+                    </div>
+                </div>
+
                   <button class="button" type="submit">Отправить</button>
                 </form>
               </div>
             </div>
           </section>
           <!-- ююююююююююююююююююююююююююююююююю -->
-<!-- seleccct -->
-<div class="wrapper">
-  <div class="jumbotron">  
-    <!-- Dropdown -->
-    <label class="drop">
-      <input type="checkbox" id="target-drop-example" class="drop-checkbox" > <!-- Toggle Drop -->
-      <span class="control">Dropdown</span> <!-- Fake button -->
-
-
-      <!-- Items -->
-      <ul class="drop-items">
-        <li class="item-drop">
-          CodePen</li>
-          <li class="item-drop">
-            CodePen</li>
-            <li class="item-drop">
-              CodePen</li>
-       </ul>
-
-      <!-- Alternative to close dropdown with click out -->
-      <label for="target-drop-example" class="overlay-close"></label>
-
-    </label>   
-    <!-- END -- Dropdown -->
-
-  </div>
-
-</div>
-
 
         </div>
       </div>
@@ -462,11 +420,38 @@
       </ul>
     </div>
   </div>
-  <footer></footer>
+  <div class="container">
+    <footer class="footer">
+      <div class="footer__box">
+        <div class="navigation footer__navigation">
+          <ul class="nav__list footer__list">
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#">Обо&nbsp;мне</a></li>
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#">Портфолио</a></li>
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#">Этапы&nbsp;работ</a></li>
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#">Цены</a></li>
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#">Обратная&nbsp;связь</a></li>
+          </ul>
+        </div>
+        <div class="header__contact  footer__contact-box">
+          <div class="header__contact-box">
+            <a class="header__nav_link nav_tel links" href="tel:+79293398016">8&nbsp;929&nbsp;339&#8209;80&#8209;16</a>
+            <a class="header__nav_link nav_mail links" href="mailto:kea-asd@yandex.ru">kea&#8209;asd@yandex.ru</a>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__copyright">
+        <p class="footer__copy">&#169; 2020, Все права защищены</p>
+        <p class="footer__copy">Сделано в рамках курса учебной платформы <a href="#" class="footer__frontend" target="_blank" rel="noopener noreferrer">Frontend Blok</a></p>
+         
+        
+      </div>
+    </footer>
+  </div>
+  
 
-  <button class="modal__btn _modal-open" data-modal-open="modal-1">
-    <span>Click me!</span>
-  </button>
+  
 
   <div class="_modal" data-modal="modal-1">
     <div class="modal-bg">
