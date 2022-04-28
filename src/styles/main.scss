@@ -296,6 +296,8 @@ li {
     justify-content: space-between;
     gap: 1.5vw;
 
+
+
     &_moby {
       align-items: center;
       justify-content: center;
@@ -535,6 +537,7 @@ li {
   display: flex;
   align-items: center;
   background-color: transparent;
+  max-width: max-content;
 
   &:hover {
     &:hover:before {
@@ -1062,7 +1065,6 @@ li {
   padding: 60px 0;
   padding-top: var(--margin-s);
   padding-bottom: var(--margin-s);
-  color: #858585;
 
   @media (max-width: $r_tab) {
     display: block;
@@ -1074,7 +1076,11 @@ li {
     align-items: center;
 
     @media (max-width: $r_tab) {
-      display: block;
+      flex-direction: column;
+    }
+
+    @media (max-width: $r_mob_567) {
+      align-items: normal;
     }
   }
 
@@ -1083,6 +1089,7 @@ li {
 
     @media (max-width: $r_tab) {
       margin-bottom: 20px;
+      order: 2;
     }
   }
 
@@ -1095,12 +1102,26 @@ li {
       margin-bottom: 30px;
     }
 
+
+  }
+
+  &__list {
+    @media (max-width: $r_mob_567) {
+      justify-content: space-between;
+      margin-bottom: 13px;
+    }
   }
 
   &__contact-box {
     @media (max-width: $r_tab) {
       justify-content: center;
       gap: 2.5vw;
+    }
+
+    @media (max-width: $r_mob_567) {
+      margin-bottom: 13px;
+      margin-bottom: 28px;
+      gap: 7.5vw;
     }
   }
 
@@ -1114,6 +1135,10 @@ li {
   &__links {
     color: $black;
 
+    &:hover {
+      color: $red;
+    }
+
     @media (max-width: $r_mob_567) {
       font-size: 11px;
     }
@@ -1126,6 +1151,7 @@ li {
   &__copyright {
     display: flex;
     justify-content: space-between;
+    color: rgb($black, .3);
 
     @media (max-width: $r_mob_567) {
       flex-direction: column;
@@ -1137,15 +1163,14 @@ li {
     @media (max-width: $r_tab) {
       left: -1.3vw;
     }
-  }
 
-  & .links {
-    color: $black;
+    @media (max-width: $r_mob_567) {
+      left: -4.3vw;
+    }
   }
 
   &__copy {
     font-size: 12px;
-    opacity: 0.3;
 
     &:last-child {
 
@@ -1157,14 +1182,18 @@ li {
     @media (max-width: $r_tab) {
       font-size: 11px;
     }
+
+    @media (max-width: $r_mob_360) {
+      font-size: 10px;
+    }
   }
 
   &__frontend {
     text-decoration: underline;
+    transition: .3 ease-in-out;
 
     &:hover {
-      color: #000;
-      opacity: 1;
+      color: rgba($black, 1);
     }
   }
 }
@@ -1807,6 +1836,7 @@ li {
 
     @media (max-width: $r_mob_567) {
       font-size: 24px;
+      margin-left: 8%;
     }
 
     @media (max-width: $r_mob_360) {
@@ -1843,11 +1873,24 @@ li {
 .your-project {
   margin-top: var(--margin-m);
 
+  @media (max-width: $r_mob_567) {
+    padding-top: 24px;
+  }
+
   &__subtitle {
     position: relative;
     font-size: 28px;
     max-width: 300px;
     line-height: 150%;
+
+    @media (max-width: $r_mob_567) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $r_mob_360) {
+      font-size: 16px;
+      max-width: 150px;
+    }
   }
 
   & .title__highlight::before {
@@ -1862,6 +1905,20 @@ li {
     @media (max-width: $r_desk_1040) {
       top: -28px;
     }
+
+    @media (max-width: $r_tab) {
+      left: 6.7%;
+    }
+
+    @media (max-width: $r_mob_567) {
+      left: 27.7%;
+    }
+
+    @media (max-width: $r_mob_360) {
+      left: 56.7%;
+    }
+
+
   }
 
   & .title__highlight::after {
@@ -1869,11 +1926,35 @@ li {
     bottom: -100px;
     width: 300px;
     height: 300px;
+
+    @media (max-width: $r_tab) {
+      width: 190px;
+      height: 190px;
+      left: -39%;
+      bottom: -60px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      width: 190px;
+      height: 190px;
+      left: -9%;
+      bottom: -98px;
+    }
+
+    @media (max-width: $r_mob_360) {
+      left: -36%;
+      bottom: -91px;
+    }
   }
 
   &__text {
     margin-top: 15px;
     max-width: 550px;
+
+    @media (max-width: $r_mob_567) {
+      max-width: 314px;
+      margin-top: 20px;
+    }
   }
 
   &__wrap {
@@ -1902,6 +1983,7 @@ li {
       order: 2;
       margin-top: 60px;
       justify-content: center;
+      margin-bottom: 20px;
     }
   }
 
@@ -1933,7 +2015,18 @@ Select c dropdown на JS
     line-height: 150%;
     cursor: pointer;
     border: none;
+
+    @media (max-width: $r_mob_567) {
+      font-size: 11px;
+      padding: 20px 20px;
+    }
+
+    @media (max-width: $r_mob_360) {
+      font-size: 10px;
+    }
+
   }
+
 
   &__button_arrow {
     content: "";
