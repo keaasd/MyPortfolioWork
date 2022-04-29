@@ -110,12 +110,12 @@ const body = document.body;
 if (burger && menu) {
   burger.onclick = () => {
     menu.classList.toggle('burger_active')
-    body.classList.add("_locked");
+    // body.classList.add("_locked");
   }
 }
 burgerclose.addEventListener('click', () => {
   menu.classList.remove('burger_active')
-  body.classList.remove("_locked");
+  // body.classList.remove("_locked");
 });
 
 menu.addEventListener('click', e => {

@@ -14,7 +14,7 @@ $bla1: rgb(35, 35, 38);
 $bla2: rgb(20, 20, 22);
 
 $whi1: rgb(243, 242, 240);
-$whi1: rgb(196, 196, 196); 
+$whi1: rgb(196, 196, 196);
 $gr1: rgb(55, 55, 55);
 
 
@@ -65,14 +65,16 @@ body {
   font-weight: 400;
   font-family: $font-inter;
   background-color: #F3F2F0;
-
+transition: .3s ease-in-out;
 }
 
-img {
+img, svg {
   width: 100%;
   height: 100%;
   object-fit: contain;
   flex-shrink: 0;
+  fill: black;
+  fill: white;
 
 }
 
@@ -242,12 +244,14 @@ li {
       content: "";
       position: absolute;
       left: -3.6vw;
+      left: -2.2vw;
       bottom: 0;
       display: block;
       height: 24px;
       width: 1px;
       opacity: 0.2;
       background-color: #010101;
+
     }
   }
 }
@@ -292,7 +296,9 @@ li {
     transform: translate(-50%, 0);
     border-bottom: 1px solid rgba(1, 1, 1, .2);
   }
-
+&__btn-flex {
+  display: flex;
+}
   &__contact {
     @media (max-width: $r_tab) {
       width: 100%;
@@ -318,6 +324,8 @@ li {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
+    margin-top: auto;
+    margin-bottom: auto;
     display: block;
 
     @media (max-width: $r_desk_1040) {
@@ -1074,6 +1082,7 @@ li {
   padding-top: var(--margin-s);
   padding-bottom: var(--margin-s);
   background-color: $gray;
+
   @media (max-width: $r_tab) {
     display: block;
   }
@@ -2219,32 +2228,189 @@ Select c dropdown на JS
 .dropdown__input-hidden {
   display: none;
 }
-.theme {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
 
+.theme {
+height: 1px;
+width: 1px;
+margin-left: 20px;
+}
+.checkbox {
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+ 
+}
+.checkbox + label {
+  position: relative;
+  cursor: pointer;
+}
+.checkbox + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.4);
+  transition: .2s;
+}
+.checkbox + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.4);
+  transition: .2s;
+}
+.checkbox:checked + label:before {
+  background: $white-g;
+}
+.checkbox:checked + label:after {
+  left: 26px;
 }
 // =============
 .black_th {
-  & a, & button {
+
+  & a,
+  & button {
     color: $white;
-  } 
+
+  }
+
+  & input,
+  & .dropdown,
+  & .dropdown__list {
+    background: $bla1;
+    color: $white;
+  }
+
+  & a:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+
   color: $white;
   background-color: $bla1;
+
   & .header {
     background-color: $bla1;
   }
+
   & .title__highlight::after {
     background-color: $red;
   }
+
   & .title__highlight::before {
     background-image: url(../images/triangle_white.svg);
   }
+
   & .description__link::after {
     background-image: url(../images/arrow_whi.svg);
   }
+
   & .description__link::before {
     background-color: $white;
+  }
+
+  & .burger-btn__open {
+    background-image: url(../images/burger_menu_bl.svg);
+  }
+
+  & .special__social-list::after {
+    background-color: $red;
+  }
+
+  & .special__items:nth-child(n+2)::after {
+    opacity: 0.5;
+    background-color: $white-g;
+  }
+
+  & .special__discuss,
+  & .about__wrap,
+  & .stages,
+  & .portfolio__item,
+  & .seo,
+  & .landing-page,
+  & .your-project__wrap {
+    border-bottom: 1px solid #F3F2F0;
+
+  }
+
+  & .stages__flex {
+    border-top: 1px solid #F3F2F0;
+  }
+
+  & .portfolio__fon::after,
+  & .footer {
+    background-color: $bla2;
+
+  }
+
+  & .languages_img {
+    border-bottom: 1px solid #F3F2F0;
+    border-right: 1px solid #F3F2F0;
+  }
+
+  & .languages {
+    border-top: 1px solid #F3F2F0;
+    border-left: 1px solid #F3F2F0;
+  }
+
+  & .rates__subtitle::after {
+    background-color: $red;
+  }
+
+  & .landing-page__price::after {
+    background-color: $red;
+  }
+
+  & .footer__copyright {
+    color: #F3F2F0;
+    opacity: 0.5;
+  }
+
+  & .dropdown__list-item {
+    color: rgba(243, 242, 240, 0.4);
+
+
+  }
+
+  & .dropdown__list-item:hover {
+    color: $white-g;
+  }
+  & .dropdown__button_arrow {
+    background-image: url(../images/Arrow_btn_bl.svg);
+  }
+  & ::-moz-placeholder, :-moz-placeholder {
+    opacity: 1;
+  }
+  & .modal__mb_window {
+    background-color: $bla2;
+  }
+  & .modal__link {
+    border-top: 1px solid rgba(243, 242, 240, .2);
+    
+  }
+  & .modal__link:last-child {
+    border-top: 1px solid rgba(243, 242, 240, .2);
+  }
+  & .modal__link:last-child {
+    border-bottom: 1px solid rgba(243, 242, 240, .2);
+  }
+  & .burger-btn__close {
+    background-image: url(../images/close_bl.svg);
+  }
+  & .modal__link_mail::after {
+    background-color: $white-g;
+  }
+  & .nav_mail::after {
+    opacity: 0.5;
+border: 1px solid #F3F2F0;
   }
 }
