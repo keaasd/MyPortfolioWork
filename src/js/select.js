@@ -23,13 +23,19 @@
             const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
             const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
             const button_arrow = document.querySelector('.dropdown__button_arrow');
+            // лиШка
+            // const button_clatc = document.querySelectorAll('.dropdown__list-item');
+            // for (var i = 0; i < button_clatc.length; i++) {}
+            // function (bt) {}
+
+
             // Клик по кнопке. Открыть/Закрыть select
             dropDownBtn.addEventListener('click', function (e) {
                 dropDownList.classList.toggle('dropdown__list--visible');
                 button_arrow.classList.toggle('dropdown__button_arrow-active');
                 this.classList.add('dropdown__button--active');
             });
-        
+            // e.target.textContent
             // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
             dropDownListItems.forEach(function (listItem) {
                 listItem.addEventListener('click', function (e) {
@@ -38,7 +44,9 @@
                     dropDownBtn.focus();
                     dropDownInput.value = this.dataset.value;
                     dropDownList.classList.remove('dropdown__list--visible');
+                    button_arrow.classList.remove('dropdown__button_arrow-active');
                 });
+
             });
         
             // Клик снаружи дропдауна. Закрыть дропдаун

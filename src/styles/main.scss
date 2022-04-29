@@ -1,12 +1,21 @@
 @import url("../styles/fonts.css");
 
 $black: rgb(1, 1, 1);
-$white-g: rgb(243, 242, 240);
+// $white-g: rgb(243, 242, 240);
+$white-g: rgb(231, 230, 228);
 $white: #FFFFFF;
 $red: #D40000;
+$gray: #E8E8E7;
 $border: 1px solid #010101;
 $font-inter: "Inter",
 serif;
+
+$bla1: rgb(35, 35, 38);
+$bla2: rgb(20, 20, 22);
+
+$whi1: rgb(243, 242, 240);
+$whi1: rgb(196, 196, 196); 
+$gr1: rgb(55, 55, 55);
 
 
 $r_minmob: 320px;
@@ -28,17 +37,20 @@ $r_desk_1360: 1360px;
   --margin-l: 180px;
   --margin-m: 80px;
   --margin-s: 60px;
+  --margin-mini: 40px;
 
   @media (max-width: $r_tab) {
     --margin-l: 100px;
     --margin-m: 60px;
     --margin-s: 50px;
+    --margin-mini: 30px;
   }
 
   @media (max-width: $r_mob_567) {
     --margin-l: 80px;
     --margin-m: 40px;
     --margin-s: 40px;
+    --margin-mini: 20px;
   }
 }
 
@@ -67,6 +79,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  transition: .3 ease-in-out;
 }
 
 h1,
@@ -242,10 +255,6 @@ li {
 .modal_box {
   display: flex;
   justify-content: space-between;
-}
-
-._locked {
-  overflow: hidden;
 }
 
 /* moby-modal-off */
@@ -742,7 +751,7 @@ li {
   }
 
   @media (max-width: $r_mob_567) {
-    gap: 20px 0;
+    gap: 30px 0;
     justify-content: space-between;
   }
 
@@ -771,6 +780,7 @@ li {
 
   &__text {
     opacity: 1;
+    margin-top: 15px;
   }
 }
 
@@ -899,7 +909,6 @@ li {
 
   &_item {
     color: rgba(1, 1, 1, 0.4);
-    background-color: rgba(1, 1, 1, 0.05);
     cursor: pointer;
     transition: 0.3s ease-out;
     padding: 0 20px 24px;
@@ -1062,10 +1071,9 @@ li {
 }
 
 .footer {
-  padding: 60px 0;
   padding-top: var(--margin-s);
   padding-bottom: var(--margin-s);
-
+  background-color: $gray;
   @media (max-width: $r_tab) {
     display: block;
   }
@@ -1175,7 +1183,7 @@ li {
     &:last-child {
 
       @media (max-width: $r_mob_567) {
-        margin-top: 15px;
+        margin-top: 20px;
       }
     }
 
@@ -1199,9 +1207,6 @@ li {
 }
 
 // модалка
-._locked {
-  overflow: hidden;
-}
 
 .modal__btn {
   border: none;
@@ -1241,7 +1246,7 @@ li {
 }
 
 .about {
-  margin-top: 160px;
+  margin-top: 170px;
   margin-bottom: 40px;
 
   @media (max-width: $r_tab) {
@@ -1249,11 +1254,11 @@ li {
   }
 
   @media (max-width: $r_mob_567) {
-    margin-top: 58px;
+    margin-top: 67px;
   }
 
   &__wrap {
-    padding-bottom: 33px;
+    padding-bottom: var(--margin-s);
     border-bottom: 1px solid $black;
     display: flex;
     justify-content: space-between;
@@ -1263,7 +1268,7 @@ li {
     }
 
     @media (max-width: $r_mob_567) {
-      padding-bottom: 24px;
+      padding-bottom: 40px;
     }
 
   }
@@ -1281,7 +1286,7 @@ li {
   }
 
   &__text {
-    margin-top: 5px;
+    margin-top: 10px;
     max-width: 559px;
 
     @media (max-width: $r_tab) {
@@ -1319,9 +1324,9 @@ li {
     grid-template-columns: repeat(2, 1fr);
     max-width: 559px;
     margin-left: auto;
-    margin-top: 60px;
-    margin-bottom: 165px;
-    gap: 47px 20px;
+    margin-top: var(--margin-s);
+    margin-bottom: var(--margin-l);
+    gap: 60px 20px;
 
     @media (max-width: $r_tab) {
       gap: 35px 40px;
@@ -1332,12 +1337,12 @@ li {
 
     @media (max-width: $r_mob_567) {
       margin-top: 40px;
-      margin-bottom: 46px;
+      margin-bottom: 58px;
       max-width: 495px;
     }
 
     @media (max-width: $r_mob_360) {
-      gap: 20px 2px;
+      gap: 28px 2px;
     }
   }
 
@@ -1425,8 +1430,45 @@ li {
     margin-top: 60px;
   }
 
+  & .title__highlight::before {
+    left: 130.7%;
+
+    @media (max-width: $r_desk_1360) {
+      top: -76px;
+    }
+
+    @media (max-width: $r_desk_1040) {
+      top: -38px;
+    }
+
+    @media (max-width: $r_tab) {
+      opacity: 0;
+    }
+  }
+
+  & .title__highlight::after {
+    bottom: inherit;
+    left: inherit;
+    top: -56px;
+    right: -57%;
+    width: 465px;
+    height: 465px;
+
+    @media (max-width: $r_tab) {
+      width: 190px;
+      height: 190px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      top: -8px;
+      right: -74%;
+    }
+
+  }
+
   &_title {
     padding-top: 20px;
+    display: inline-block;
   }
 
   &__fon {
@@ -1439,14 +1481,95 @@ li {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #EDECEA;
+      background-color: $gray;
       z-index: -3;
+
+      @media (max-width: $r_mob_567) {
+        top: 20px;
+
+      }
+
+
+    }
+  }
+
+  &__list {
+    margin-top: 132px;
+
+    @media (max-width: $r_tab) {
+      margin-top: 80px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      margin-top: 46px;
     }
   }
 
   &__item {
-    padding-bottom: var(--margin-m);
+    padding-top: var(--margin-s);
+    padding-bottom: var(--margin-s);
     border-bottom: $border;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $r_mob_567) {
+      flex-direction: column;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
+    padding-bottom: 3%;
+
+    @media (max-width: $r_tab) {
+      flex-shrink: 1.2;
+    }
+  }
+
+  &__text-box {
+    flex-grow: 1;
+    margin-top: 40px;
+
+    @media (max-width: $r_tab) {
+      margin-top: 30px;
+      max-width: 290px;
+    }
+
+    @media (max-width: $r_mob_567) {
+      margin-top: 20px;
+    }
+  }
+
+  &__descript {
+    font-size: 16px;
+    line-height: 150%;
+    opacity: 0.8;
+    margin-bottom: 10px;
+
+    @media (max-width: $r_mob_567) {
+      font-size: 12px;
+    }
+  }
+
+  &__subtitle {
+    opacity: 0.8;
+    margin-top: var(--margin-mini);
+  }
+
+  &__image {
+    // height: 315px;
+    flex-grow: 1;
+    width: 100%;
+    margin-left: 20px;
+
+    @media (max-width: $r_mob_567) {
+      margin-left: 0;
+      margin-top: 30px;
+    }
   }
 }
 
@@ -1687,6 +1810,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 1vw;
 
     @media (max-width: $r_tab) {
       max-width: 43.9vw;
@@ -1700,6 +1824,7 @@ li {
     font-size: 28px;
     font-weight: 400;
     line-height: 150%;
+    margin-right: 10px;
     max-width: 382px;
 
     @media (max-width: $r_tab) {
@@ -1721,6 +1846,7 @@ li {
     font-size: 16px;
     line-height: 150%;
     opacity: 0.8;
+    flex-grow: 1;
     margin-top: 20px;
     margin-bottom: 73px;
 
@@ -1882,6 +2008,7 @@ li {
     font-size: 28px;
     max-width: 300px;
     line-height: 150%;
+    margin-right: 30px;
 
     @media (max-width: $r_mob_567) {
       font-size: 18px;
@@ -1948,7 +2075,8 @@ li {
   }
 
   &__text {
-    margin-top: 15px;
+    // margin-top: 15px;
+    margin-top: 10px;
     max-width: 550px;
 
     @media (max-width: $r_mob_567) {
@@ -2002,7 +2130,7 @@ Select c dropdown на JS
 
 .dropdown {
   position: relative;
-  background: rgba($black, .05);
+  background: #DDD;
 
   &__button {
     position: relative;
@@ -2058,7 +2186,7 @@ Select c dropdown на JS
     padding: 0;
     overflow: hidden;
     width: 100%;
-    background: #E7E6E4;
+    background: #DDD;
     padding-top: 7px;
     visibility: hidden;
     opacity: 0;
@@ -2091,5 +2219,32 @@ Select c dropdown на JS
 .dropdown__input-hidden {
   display: none;
 }
+.theme {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 
+}
 // =============
+.black_th {
+  & a, & button {
+    color: $white;
+  } 
+  color: $white;
+  background-color: $bla1;
+  & .header {
+    background-color: $bla1;
+  }
+  & .title__highlight::after {
+    background-color: $red;
+  }
+  & .title__highlight::before {
+    background-image: url(../images/triangle_white.svg);
+  }
+  & .description__link::after {
+    background-image: url(../images/arrow_whi.svg);
+  }
+  & .description__link::before {
+    background-color: $white;
+  }
+}

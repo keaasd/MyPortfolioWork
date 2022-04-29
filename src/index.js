@@ -8,6 +8,12 @@ import './js/select.js';
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 
+const theme = document.querySelector('.theme');
+
+console.log('theme: ', theme);
+theme.addEventListener('click', () => {  
+  body.classList.toggle("black_th");
+});
 // scroll 
 const header = document.querySelector('.header');
 const page = document.querySelector('main');
