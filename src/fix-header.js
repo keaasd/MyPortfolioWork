@@ -1,3 +1,5 @@
+const header = document.querySelector('.header');
+const page = document.querySelector('main');
 
 function fixHeader() {
     if (window.scrollY > header.clientHeight) {
@@ -8,13 +10,5 @@ function fixHeader() {
       page.style.marginTop = 0;
     }
   }
-  
-  
-  window.addEventListener('wheel', function(evt) {
-    if(evt.deltaY < 0) {
-      //  поймали
-       console.log('поймали: ');
-   }
-  });
   
   window.addEventListener('scroll', fixHeader)

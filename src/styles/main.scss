@@ -12,10 +12,11 @@ serif;
 
 $bla1: rgb(35, 35, 38);
 $bla2: rgb(20, 20, 22);
-
+$bla3: rgb(243, 242, 240);
 $whi1: rgb(243, 242, 240);
 $whi1: rgb(196, 196, 196);
 $gr1: rgb(55, 55, 55);
+
 
 
 $r_minmob: 320px;
@@ -287,7 +288,7 @@ li {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: $white-g;
+    background-color: #F3F2F0;
     margin: 0 auto;
     box-sizing: border-box;
     z-index: 5;
@@ -2364,7 +2365,7 @@ Select c dropdown на JS
   & .portfolio__item,
   & .seo,
   & .landing-page,
-  & .your-project__wrap {
+  & .your-project__wrap, & .modal-callback__line {
     border-bottom: 1px solid #F3F2F0;
 
   }
@@ -2454,5 +2455,14 @@ Select c dropdown на JS
   & .advantage__image svg {
     fill: white;
   }
+& .modal-body {
+background-color: $bla1;
+}
+& .modal__user, & .dropdown__button, & .modal__form_item, & .dropdown__list {
+  background-color: $gr1;
 
+}
+& .burger-btn__close {
+  background-image: url(../images/close_bl.svg);
+}
 }
