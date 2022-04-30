@@ -18,21 +18,18 @@ theme.addEventListener('click', () => {
 const header = document.querySelector('.header');
 const page = document.querySelector('main');
 
-function fixHeader() {
-  if (window.scrollY > header.clientHeight) {
+window.addEventListener('wheel', function(evt) {
+  if(evt.deltaY < 0) {
+    //  console.log('поймали: ');
     header.classList.add('fix-header')
     page.style.marginTop = header.clientHeight + 'px';
   } else {
     header.classList.remove('fix-header')
-    page.style.marginTop = 0;
-  }
-}
-if (window.pageYOffset > 0){
-  console.log('больше 0: ');
-}
-// window.scrollTo(pageYOffset, 0)
+      page.style.marginTop = 0;
+    }
+ 
+});
 
-window.addEventListener('scroll', fixHeader)
 // Swiper свайпер
 var swiper = new Swiper(".offerSwiper", {
   slidesPerView: 3,
