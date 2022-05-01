@@ -16,19 +16,24 @@
                 }
             };
         }
-        
+
+       
         document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
             const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
             const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
             const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
             const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
             const button_arrow = document.querySelector('.dropdown__button_arrow');
+            
+            
+const pseInp = document.querySelector('.psevdo-input');
+dropDownInput.value = dropDownBtn.innerText;
+            
             // лиШка
             // const button_clatc = document.querySelectorAll('.dropdown__list-item');
             // for (var i = 0; i < button_clatc.length; i++) {}
             // function (bt) {}
-
-
+            
             // Клик по кнопке. Открыть/Закрыть select
             dropDownBtn.addEventListener('click', function (e) {
                 dropDownList.classList.toggle('dropdown__list--visible');
@@ -65,3 +70,5 @@
                 }
             });
         });
+        
+        

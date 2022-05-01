@@ -9,8 +9,6 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 
 const theme = document.querySelector('.theme');
-
-console.log('theme: ', theme);
 theme.addEventListener('click', () => {  
   body.classList.toggle("black_th");
 });

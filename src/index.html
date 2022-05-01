@@ -454,9 +454,10 @@
                 <li class="special__items"><a href="" class="special__link links lind">Linkedin</a></li>
               </ul>
               <div class="your-project__modal">
-                <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                <!-- action="https://jsonplaceholder.typicode.com/posts" -->
+                <form class="modal__form" action="sendmail.php" method="post">
                   <label for="tel" class="modal__label modal_font">Телефон или почта</label>
-                  <input id="tel" name="tel-email" class="modal__user modal_font" type="text"
+                  <input id="tel" name="tel" class="modal__user modal_font" type="text"
                     placeholder="Введите телефон" required>
                   <span class="modal__label modal_font">Выберите удобный способ связи</span>
                   <div class="form-group">
@@ -472,7 +473,7 @@
                         <li class="dropdown__list-item" data-value="sms">SMS сообщение</li>
                         <li class="dropdown__list-item" data-value="telegram">Telegram</li>
                       </ul>
-                      <input type="text" name="select-category" value="telegramm" class="dropdown__input-hidden">
+                      <input type="text" id="myform" name="select1" value="telegramm" class="dropdown__input-hidden">
                     </div>
                   </div>
 
