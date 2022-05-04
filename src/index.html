@@ -455,7 +455,10 @@
               </ul>
               <div class="your-project__modal">
                 <!-- action="https://jsonplaceholder.typicode.com/posts" -->
-                <form class="modal__form" action="sendmail.php" method="post">
+                
+                <!-- <form class="modal__form" action="https://docs.google.com/forms/d/e/1FAIpQLSfpFEMYdno_7PavklWIeEZHaH8SjJlivhFja4ZpQp6_0gOUdQ/viewform?usp=sf_link" method="post"></form> -->
+                <!-- <form class="modal__form" action="sendmail.php" method="post"> -->
+                  <form name="form" class="modal__form" method="get">
                   <label for="tel" class="modal__label modal_font">Телефон или почта</label>
                   <input id="tel" name="tel" class="modal__user modal_font" type="text"
                     placeholder="Введите телефон" required>
@@ -463,7 +466,7 @@
                   <div class="form-group">
                     <div class="dropdown">
                       <div class="dropdown__box">
-                        <button type="button" class="dropdown__button" aria-required="true">Telegram</button>
+                        <button type="button" class="dropdown__button dropdown__button_mb " aria-required="true">Telegram</button>
                         <span class="dropdown__button_arrow"></span>
                       </div>
                       <ul class="dropdown__list">
@@ -473,7 +476,7 @@
                         <li class="dropdown__list-item" data-value="sms">SMS сообщение</li>
                         <li class="dropdown__list-item" data-value="telegram">Telegram</li>
                       </ul>
-                      <input type="text" id="myform" name="select1" value="telegramm" class="dropdown__input-hidden">
+                      <input type="text" id="myform" name="select1" class="dropdown__input-hidden">
                     </div>
                   </div>
 
@@ -560,9 +563,12 @@
           </div>
           <div class="modal-callback__line"></div>
         </div>
-        <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+        
+
+
+        <form class="modal__form" name="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
           <label for="tel" class="modal__label modal_font">Телефон или почта</label>
-          <input class="modal__user modal_font" type="text" placeholder="Введите телефон">
+          <input class="modal__user modal_font" name="tel" type="text" placeholder="Введите телефон" required>
           <span class="modal__label modal_font">Выберите удобный способ связи</span>
           <div class="dropdown modal__users  modal_font">
             <div class="dropdown__box">
@@ -576,7 +582,7 @@
               <li class="dropdown__list-item modal__form_item modal_font" data-value="sms">SMS сообщение</li>
               <li class="dropdown__list-item modal__form_item modal_font" data-value="telegram">Telegram</li>
             </ul>
-            <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+            <input type="text" name="select1"  name="select-category" class="dropdown__input-hidden">
           </div>
           <button class="button" type="submit">Отправить</button>
 
@@ -584,7 +590,9 @@
       </div>
     </div>
   </div>
-
+<button class="btn_up" id="btnUp">
+  <img src="/src/images/up.svg" alt="">
+</button>
 </body>
 
 </html>

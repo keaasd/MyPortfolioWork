@@ -7,9 +7,10 @@ require 'path/to/PHPMailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
-$mail->setLanguage('fr', '/optional/path/to/language/directory/');
+$mail->setLanguage('ru', 'phpmailer/language/directory/');
+$mail->isHTML(true);  
 // от кого 
-$mail->isHTML('info@fls.guru', 'Фрилан');  
+$mail->setFrom('info@fls.guru', 'Фрилан');  
 // кому  
 $mail->addAddress('kea-asd@yandex.ru');  
 $mail->Subject = 'привет! это фрилан';
@@ -19,38 +20,38 @@ if($_POST['hand'] == "left") {
 $hand = "правая";
 }
 // тело письма
-$body = '<h1>Встречайте супер письмо!</h1>;
-if(trim(!impty($_POST['name']))){
-$body.=<p><strong>имя:</strong> '.$_POST['name'].'</p>';
+$body = '<h1>Встречайте супер письмо!</h1>';
+
+if(trim(!impty($_POST['name']))) {
+    $body.='<p><strong>имя:</strong> '.$_POST["name"].'</p>';
 }
 
-
 if(trim(!impty($_POST['email']))){
-    $body.=<p><strong>e-mail:</strong> '.$_POST['email'].'</p>';
+    $body.='<p><strong>e-mail:</strong> '.$_POST["email"].'</p>';
     }
     
-    if(trim(!impty($_POST['hand']))){
-    $body.=<p><strong>рука:</strong> '.$_POST['hand'].'</p>';
+if(trim(!impty($_POST['hand']))){
+    $body.='<p><strong>рука:</strong> '.$_hand.'</p>';
     }
-    if(trim(!impty($_POST['age']))){
-    $body.=<p><strong>Возраст:</strong> '.$_POST['age'].'</p>';
+if(trim(!impty($_POST['age']))){
+    $body.='<p><strong>Возраст:</strong> '.$_POST["age"].'</p>';
     }
     
-    if(trim(!impty($_POST['message']))){
-    $body.=<p><strong>Сообщение:</strong> '.$_POST[''message'].'</p>';
+if(trim(!impty($_POST['message']))){
+    $body.='<p><strong>Сообщение:</strong> '.$_POST["message"].'</p>';
     }
-    // файл прикрепить
-    if(!impty($_FILES['image'][tmp_name])){
+// файл прикрепить
+if(!impty($_FILES['image']['tmp_name'])) {
     // путь загрузки файла
     $filePath = __DIR__ . "/files/" . $_FILES['image']['name'];
     // загрузим файл
-    if(copy($_FILES['image'][tmp_name], $filePath)){
+    if(copy($_FILES['image']['tmp_name'], $filePath)){
     $fileAttach = $filePath;
     $body .='<p><strong>Фото в приложении</strong>';
     $mail ->addAttachment($fileAttach);
     }
 
-    $mail ->Body = $body;
+    $mail->Body = $body;
 
     // отправляем
     if (!$mail ->send()) {
@@ -61,5 +62,5 @@ if(trim(!impty($_POST['email']))){
     $response = ['message' => $message];
     
     header('Content-type: application/json');
-    echo json_iincode($response);
+    echo json_encode($response);
 ?>

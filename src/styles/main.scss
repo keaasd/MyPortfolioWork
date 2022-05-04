@@ -260,6 +260,12 @@ li {
   display: flex;
   justify-content: space-between;
 }
+.btn_up {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: transparent;
+}
 
 /* moby-modal-off */
 .header {
@@ -349,7 +355,12 @@ li {
 
 
 }
-
+.btn_up {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: transparent;
+}
 .nav_mail {
   position: relative;
 
@@ -2464,5 +2475,8 @@ background-color: $bla1;
 }
 & .burger-btn__close {
   background-image: url(../images/close_bl.svg);
+}
+& .landing-page__item::before {
+  background-color: $white;
 }
 }

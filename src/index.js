@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 import './styles/main.scss';
 import $ from 'jquery';
 import './js/select.js';
+import './js/btn-up';
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 
@@ -16,6 +17,7 @@ theme.addEventListener('click', () => {
 const header = document.querySelector('.header');
 const page = document.querySelector('main');
 
+
 window.addEventListener('wheel', function(evt) {
   if(evt.deltaY < 0) {
     //  console.log('поймали: ');
@@ -26,6 +28,13 @@ window.addEventListener('wheel', function(evt) {
       page.style.marginTop = 0;
     }
  
+});
+// header.contains
+header.addEventListener('click', () => {  
+
+  
+  header.classList.remove('fix-header')
+      page.style.marginTop = 0;
 });
 
 // Swiper свайпер

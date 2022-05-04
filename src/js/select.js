@@ -20,15 +20,16 @@
        
         document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
             const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+            const dropDownBtnMb = dropDownWrapper.querySelector('.dropdown__button_mb');
+            
             const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
             const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-            const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+            const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');            
             const button_arrow = document.querySelector('.dropdown__button_arrow');
-            
-            
-const pseInp = document.querySelector('.psevdo-input');
-dropDownInput.value = dropDownBtn.innerText;
-            
+            // const pseInp = document.querySelector('.psevdo-input');
+            // const dropDownInputMb = dropDownWrapper.querySelector('.dropdown__input-hidden-mb');
+            dropDownInput.value = dropDownBtn.innerText;
+            // dropDownInputMb.value = dropDownBtnMb.innerText;
             // лиШка
             // const button_clatc = document.querySelectorAll('.dropdown__list-item');
             // for (var i = 0; i < button_clatc.length; i++) {}

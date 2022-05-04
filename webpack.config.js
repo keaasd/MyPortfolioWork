@@ -30,6 +30,7 @@ module.exports = ({develop}) => ({
                 {
                     test: /\.(?:ico|png|jpg|jpeg|svg|)$/i,
                     type: 'asset/inline'
+                    // use: 'svg-inline-loader'
                 },
                 {
                     test: /\.html$/i,
