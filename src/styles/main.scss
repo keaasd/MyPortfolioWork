@@ -260,12 +260,7 @@ li {
   display: flex;
   justify-content: space-between;
 }
-.btn_up {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  background: transparent;
-}
+
 
 /* moby-modal-off */
 .header {
@@ -2311,8 +2306,26 @@ Select c dropdown на JS
 
 .checkbox:checked+label:after {
   right: 17px;
+} 
+.to-up {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;  
+  background: $gr1;
+  padding: 20px;
+  border-radius: 2px;
+  font-size: 20px;
+  z-index: 5;
 }
-
+.button-up.hidden {
+  opacity: 0;
+}
+.visible {
+  opacity: 1;  
+}
 // =============
 .black_th {
 

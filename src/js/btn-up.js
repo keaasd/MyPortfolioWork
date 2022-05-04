@@ -1,26 +1,18 @@
 // Button Up
-
-window.onscroll = function(){scrollFunction()};
-
-const upbuttons = document.querySelectorAll(".button-up");
-
-for (const upbutton of upbuttons) {
-    upbutton.addEventListener("click", clickHandler);
-}
-
-function clickHandler(e) {
-    e.preventDefault();
-    const href = this.getAttribute("href");
-
-document.querySelector(href).scrollIntoView({
-    behavior: "smooth"
-});
-}
-
-function scrollFunction(){
-    if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
-        document.getElementById('btnUp').className = 'button-up visible';
-    } else {
-        document.getElementById('btnUp').className = 'button-up hidden';
+document.addEventListener('DOMContentLoaded', () => {
+    let toTopBtn = document.querySelector('.to-up');
+    window.onscroll = function () {
+        if (window.pageYOffset > 580) {
+            toTopBtn.classList.add('visible')
+        } else {
+            toTopBtn.classList.remove('visible')
+        }
     }
-}
+    // плавный скролл наверх 
+    toTopBtn.addEventListener('click', function () {
+        window.scrollBy({
+            top: -document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+});
