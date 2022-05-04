@@ -203,6 +203,7 @@ li {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
+  overflow: scroll;
   transition: all 0.2s;
 }
 
@@ -2309,22 +2310,24 @@ Select c dropdown на JS
 } 
 .to-up {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
-  width: 30px;
-  height: 30px;
+  right: 20px;
+  bottom: 20px;
   opacity: 0;  
   background: $gr1;
-  padding: 20px;
-  border-radius: 2px;
+  color: $white;
+  padding: 10px;
+  border-radius: 5px;
   font-size: 20px;
   z-index: 5;
-}
-.button-up.hidden {
-  opacity: 0;
+  transform: scale(1);
+  transition: .3s linear;
+  .black_th &:hover {
+    text-decoration: none;
+    transform: scale(1.2);
+  }
 }
 .visible {
-  opacity: 1;  
+  opacity: .7;  
 }
 // =============
 .black_th {
